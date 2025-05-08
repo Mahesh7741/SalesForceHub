@@ -10,11 +10,12 @@ import SalesforceChatterPage from "../components/salesforceChatter/SalesforceCha
 import SalesCloudManager from "../components/salescloud/salesManager";
 import Fileuploader from "../components/fileuploader/Fileuploader";
 import Health from "../components/health/Health";
-import ServiceCloud from "../components/serviceCloud";
+import ServiceCloud from "../components/servicecloud/serviceCloud.jsx";
 import MarketingCloud from "../components/marketingCloud";
 import Dashboard from "../components/default";
 import AIQueryAssistant from '../components/aiassistanquery/AIQueryAssistant .jsx'
 import GeminiChatAssistant from "../components/aiassistanquery/GeminiChatAssistant.jsx";
+
 import Link from "next/link";
 import { 
   LayoutDashboard, 
