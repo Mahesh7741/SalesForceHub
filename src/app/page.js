@@ -95,7 +95,7 @@ const Page = () => {
 
   // Salesforce Account button (external link)
   const handleSalesforceAccountClick = () => {
-    window.location.href = "http://localhost:3000/dashboard"; // Replace with actual Salesforce account URL
+    window.location.href = "/dashboard"; // Replace with actual Salesforce account URL
   };
 
   return (
