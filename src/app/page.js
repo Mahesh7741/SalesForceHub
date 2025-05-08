@@ -16,7 +16,7 @@ import Dashboard from "../components/default";
 import AIQueryAssistant from '../components/aiassistanquery/AIQueryAssistant .jsx'
 import GeminiChatAssistant from "../components/aiassistanquery/GeminiChatAssistant.jsx";
 import ApexClassViewer from "../components/apexClass/ApexClass.jsx";
-import CreateEmailTemplate from "../components/Email/CreateEmailTemplate.jsx";
+import CreateEmailTemplate from "../components/email/CreateEmailTemplate";
 import UsersTable from "../components/users/UsersTable.jsx";
 import SchemaBuilder from '../components/schemabuilder/SchemaBuilder'
 import ReportsBuild from '../components/reports/ReportsBuild.jsx'
