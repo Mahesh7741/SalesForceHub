@@ -15,7 +15,11 @@ import MarketingCloud from "../components/marketingCloud";
 import Dashboard from "../components/default";
 import AIQueryAssistant from '../components/aiassistanquery/AIQueryAssistant .jsx'
 import GeminiChatAssistant from "../components/aiassistanquery/GeminiChatAssistant.jsx";
-
+import ApexClassViewer from "../components/apexClass/ApexClass.jsx";
+import CreateEmailTemplate from "../components/Email/CreateEmailTemplate.jsx";
+import UsersTable from "../components/users/UsersTable.jsx";
+import SchemaBuilder from '../components/schemabuilder/SchemaBuilder'
+import ReportsBuild from '../components/reports/ReportsBuild.jsx'
 import Link from "next/link";
 import { 
   LayoutDashboard, 
@@ -28,7 +32,8 @@ import {
   Mail, 
   LogOut,
   ChevronRight,
-  UserCircle
+  UserCircle,
+  Proportions
 } from "lucide-react";
 
 const Page = () => {
@@ -75,6 +80,16 @@ const Page = () => {
         return <AIQueryAssistant />;  
       case "chat assistant":
         return <GeminiChatAssistant />;
+      case "createEmailTemplate":
+        return <CreateEmailTemplate />;
+      case "apexclass":
+        return <ApexClassViewer />;
+      case "users":
+        return <UsersTable />;
+      case 'schema':
+        return <SchemaBuilder/>  
+      case 'reports':
+        return <ReportsBuild/> 
       default:
         return <Dashboard />;
     }
@@ -82,16 +97,20 @@ const Page = () => {
 
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: <LayoutDashboard size={20} /> },
-    { id: "salescloud", label: "Sales Cloud", icon: <Users size={20} /> },
+    { id: "salescloud", label: "Sales Cloud", icon: <UserCircle size={20} /> },
     { id: "health", label: "Health", icon: <HeartPulse size={20} /> },
     { id: "fileuploader", label: "File Uploader", icon: <Upload size={20} /> },
     { id: "salesforceChatter", label: "Salesforce Chatter", icon: <MessageSquare size={20} /> },
     { id: "loginHistory", label: "Login History", icon: <Clock size={20} /> },
     { id: "servicecloud", label: "Service Cloud", icon: <HelpCircle size={20} /> },
     { id: "marketingcloud", label: "Marketing Cloud", icon: <Mail size={20} /> },
-    { id: "aiquery", label: "AI Query Assistant", icon: <MessageSquare size={20} /> },
-    { id: "chat assistant", label: "Chat Assistant", icon: <MessageSquare size={20} /> },
-   
+    { id: "aiquery", label: "AI Query Assistant", icon: <LayoutDashboard size={20} /> },
+    { id: "chat assistant", label: "Chat Assistant", icon: <Users size={20} /> },
+    { id: "apexclass", label: "Apex Class Viewer", icon: <ChevronRight size={20} /> },
+    { id: "createEmailTemplate", label: "Create Email Template", icon: <Mail size={20} /> },
+    { id: "users", label: "Users", icon: <Users size={20} /> },
+    { id: "schema", label: "Schema Builder", icon: <Users size={20} /> },
+    { id: "reports", label: "Reports", icon: <Proportions size={20} /> }, 
   ];
 
   // Salesforce Account button (external link)
